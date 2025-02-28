@@ -71,6 +71,8 @@ body :is(h1,h2,h3){
     text-align: center;
 }
 .main_habilidades-cajas{
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas: "skils skils";
+    grid-template-columns: 200px 1fr 1fr;
+    column-gap: 20px;
 }
