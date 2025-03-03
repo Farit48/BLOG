@@ -1,3 +1,33 @@
+/**VARIABLES**/
+:root{
+    --fuente-titulos:"DM Serif Text", serif;
+    --fuente-subtitulo:"DM Serif Text", serif;
+}
+
+
+
+/**REGLAS GENERAL**/
+body{
+    background-color: rgb(255, 245, 233);
+}
+
+/**HEADER**/
+.Encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.Encabezado :is(h1){
+    font-size: 50px;
+    font-family: var(--fuente-titulos);
+}
+.Encabezado p {
+    font-family: var(--fuente-subtitulo) ;
+}
+
+/**MAIN**/
 .principal {
     display: flex;
     justify-content: center;
@@ -6,21 +36,43 @@
 }
 .Bloque {
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(83, 61, 61);
+    color: white;
+    border-radius: 50px;
     width: 30%;
-    height: 600px;
+    padding: 10% 5% 10% 5% ;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-top: 50px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
 }
-.principal :is(.B1,.B2,.B3){
+.Bloque_general{
+    opacity: 0%;
+    max-height: 0px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.Bloque_general:hover{
+    opacity: 100%;
+    min-height: 100%;
+}
+
+.principal :is(.Bloque:hover, ){
+    margin-top: 0;
+   
+}
+
+.Formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
 }
-.B1:hover{
-    margin-top: 0;
-}
-.B2:hover{
-    margin-top: 0;
-}
-.B3:hover{
-    margin-top: 0;
+.Datos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
