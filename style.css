@@ -8,7 +8,33 @@
 
 /**REGLAS GENERAL**/
 body{
-    background-color: rgb(255, 245, 233);
+    background-color: #fff5e9;
+    background-image: url(Material/imagenes/Sin\ título-1.jpg);
+    background-size: contain;
+    margin: 0;
+}
+h1{
+    font-family: var(--fuente-titulos);
+    font-size: 50px;
+}
+h2 {
+    font-family: var(--fuente-subtitulo);
+    text-align: center;
+    
+}
+input {
+    background: #fff5e9;
+    color: rgb(4, 4, 4);
+    border: 2px solid rgb(44, 40, 2);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgb(126, 121, 35);
+    transition: 0.3s;
+}
+  
+input:focus {
+    box-shadow: 0 0 15px rgb(137, 112, 31);
+    outline: none;
 }
 
 /**HEADER**/
@@ -18,35 +44,47 @@ body{
     align-items: center;
     justify-content: center;
     height: 500px;
-}
-.Encabezado :is(h1){
-    font-size: 50px;
-    font-family: var(--fuente-titulos);
+    position: static;
 }
 .Encabezado p {
     font-family: var(--fuente-subtitulo) ;
 }
-
+.icon1 {
+    position: relative;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+}
+.icon2{
+    position: absolute;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+}
 /**MAIN**/
 .principal {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 10px;
+    margin-top: 0px;
     gap: 30px;
     width: 100%;
+    margin-bottom: 50px;
 }
 .Bloque {
     text-align: center;
-    background-color: rgb(83, 61, 61);
+    background-color: rgb(91, 57, 57);
     color: white;
     border-radius: 50px;
     width: 30%;
-    padding: 10% 5% 10% 5% ;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 5% 50px 5% ;
     margin-top: 50px;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+.principal :is(.Bloque:hover ){
+    margin-top: 0;  
 }
 .Bloque_general{
     opacity: 0%;
@@ -58,21 +96,64 @@ body{
 .Bloque_general:hover{
     opacity: 100%;
     min-height: 100%;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
 }
-
-.principal :is(.Bloque:hover, ){
-    margin-top: 0;
-   
+.Proyectos {
+    margin: 50px;
+    text-align: center;
+    border: 2px solid black;
+    display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	width: 80%;
+	height: 80%;
 }
-
-.Formulario {
+.Proyectos_Descripcion{
+   display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.bloquee{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
 }
+/**SECCION FORMULARIO**/
+.Formulario {
+    background-color:black ;
+    display: flex;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    height: 70px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease;
+}
+
 .Datos {
+    opacity: 0%;
+    padding: 0px 50% 0px 50%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease;
+    
 }
+.Formulario:hover, .Datos:hover {
+    height: 300px;
+    font-size: 30px;
+    opacity: 100%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease;
+}
+
