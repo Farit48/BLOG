@@ -15,12 +15,14 @@ body{
 }
 h1{
     font-family: var(--fuente-titulos);
-    font-size: 50px;
+    font-size: 89px;
 }
 h2 {
     font-family: var(--fuente-subtitulo);
-    text-align: center;
-    
+    text-align: center;   
+}
+h3 {
+    font-size: 30px;
 }
 input {
     background: #fff5e9;
@@ -30,13 +32,18 @@ input {
     border-radius: 6px;
     box-shadow: 0 0 5px rgb(126, 121, 35);
     transition: 0.3s;
-}
-  
+} 
 input:focus {
     box-shadow: 0 0 15px rgb(137, 112, 31);
     outline: none;
 }
-
+.video{
+    border-radius: 40px;
+}
+a:link {
+    text-decoration: none;
+    color: white;
+}
 /**HEADER**/
 .Encabezado {
     display: flex;
@@ -48,40 +55,33 @@ input:focus {
 }
 .Encabezado p {
     font-family: var(--fuente-subtitulo) ;
+    font-size: 45px;
 }
-.icon1 {
-    position: relative;
-    left: 250px;
-    width: 100px;
-    height: 100px;
-}
-.icon2{
-    position: absolute;
-    left: 250px;
-    width: 100px;
-    height: 100px;
-}
+
 /**MAIN**/
 .principal {
     display: flex;
     justify-content: space-around;
-    margin: 10px;
     margin-top: 0px;
-    gap: 30px;
+    gap: 10px;
     width: 100%;
     margin-bottom: 50px;
 }
 .Bloque {
+    font-size: 30px;
     text-align: center;
     background-color: rgb(91, 57, 57);
     color: white;
-    border-radius: 50px;
-    width: 30%;
-    padding: 50px 5% 50px 5% ;
+    border-radius: 40px;
+    width: 28%;
+    padding: 2%;
     margin-top: 50px;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+.Bloque_general :is(p, ul, ){
+    font-size: 15px; 
 }
 .principal :is(.Bloque:hover ){
     margin-top: 0;  
@@ -100,29 +100,49 @@ input:focus {
     transition-duration: 2s;
     transition-timing-function: ease;
 }
-.Proyectos {
-    margin: 50px;
-    text-align: center;
-    border: 2px solid black;
-    display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
-	width: 80%;
-	height: 80%;
+main h2{
+    font-size: 50px;
 }
-.Proyectos_Descripcion{
-   display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-.bloquee{
+.Proyectos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: -10px;
+    text-align: center;
 }
+.Proyectos_Fila {
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    padding: 1%;
+    width: 32%;
+    height: 365px;
+    border-radius: 40px;
+    background-color: rgb(201, 158, 138);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease;
+}
+.Proyectos_Descripcion{
+    padding: 10%;
+    opacity:0%;
+    width: 200px;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-delay: ease;
+}
+.Proyectos_Descripcion:hover , .Proyectos_Fila:hover  {
+    width: 80%;
+    opacity: 100%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease;
+}
+
 /**SECCION FORMULARIO**/
 .Formulario {
+    width: 100%;
     background-color:black ;
     display: flex;
     color: rgb(255, 255, 255);
@@ -136,24 +156,41 @@ input:focus {
     transition-duration: 1s;
     transition-delay: ease;
 }
-
 .Datos {
     opacity: 0%;
     padding: 0px 50% 0px 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 0px;
     transition-property: all;
     transition-duration: 1s;
-    transition-delay: ease;
-    
+    transition-delay: ease;   
 }
 .Formulario:hover, .Datos:hover {
-    height: 300px;
-    font-size: 30px;
+    height: 400px;
     opacity: 100%;
+    font-size: 50px;
     transition-property: all;
     transition-duration: 1s;
     transition-delay: ease;
+   
 }
-
+/**FOOTER**/
+.Piedepag{
+    margin-top: 50px;
+    height: 70px;
+    background-color: rgb(91, 57, 57);
+    padding: 30px;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 50px;
+    font-size: 25px;
+    color: white;
+}
+.Redes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
